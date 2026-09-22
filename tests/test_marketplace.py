@@ -28,13 +28,13 @@ def test_tenant_plugin_uses_the_single_identity_scoped_endpoint():
     manifest = read_json(PLUGIN / ".codex-plugin/plugin.json")
     mcp = read_json(PLUGIN / ".mcp.json")
     assert manifest["name"] == "re8ch-tenant"
-    assert manifest["version"] == "0.2.1"
+    assert manifest["version"] == "0.2.2"
     assert manifest["interface"]["displayName"] == "Re8ch Tenant"
     assert mcp == {
         "mcpServers": {
             "re8ch-tenant": {
                 "type": "http",
-                "url": "https://tools.re8ch.com/tenant/mcp",
+                "url": "https://tools.service.re8ch.com/tenant/mcp",
                 "oauth": {"clientId": "re8ch-tenant"},
                 "scopes": ["openid", "profile", "email", "groups", "offline_access"],
             }
