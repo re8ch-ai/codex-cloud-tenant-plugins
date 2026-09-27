@@ -1,0 +1,14 @@
+# Copy to .github/dependabot.yml. Keep only ecosystems and directories present in the target repository.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
+      time: "04:00"
+      timezone: Asia/Shanghai
+    open-pull-requests-limit: 5
+    groups:
+      routine-version-updates:
+        patterns: ["*"]
+        update-types: [minor, patch]
