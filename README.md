@@ -14,7 +14,7 @@ quota.
 - Name: `re8ch-cloud-tenant`
 - Git source: `https://github.com/re8ch-ai/codex-cloud-tenant-plugins.git`
 - Tenant package: `re8ch-tenant`
-- MCP resource: `https://tools.service.re8ch.com/tenant/mcp`
+- MCP resource: `https://tools.service.re8ch.com/tenant-native/mcp`
 - OIDC issuer: `https://db-rw.re8ch.com/auth/v1`
 
 The marketplace intentionally exposes one generic tenant package. Registry,
