@@ -5,17 +5,17 @@ is intentionally anonymous-readable so Codex can discover and update the plugin
 before a tenant signs in.
 
 Repository visibility does not grant cloud access. The plugin connects to an
-OAuth-protected public MCP endpoint. Dex delegates login to GitHub, and the MCP
+OAuth-protected public MCP endpoint. Supabase Identity handles login, and the MCP
 authorization layer maps the stable OIDC subject to exactly one tenant and its
 quota.
 
 ## Marketplace
 
 - Name: `re8ch-cloud-tenant`
-- Git source: `https://github.com/re8ch/codex-cloud-tenant-plugins.git`
+- Git source: `https://github.com/re8ch-ai/codex-cloud-tenant-plugins.git`
 - Tenant package: `re8ch-tenant`
 - MCP resource: `https://tools.service.re8ch.com/tenant/mcp`
-- OIDC issuer: `https://dex.re8ch.com`
+- OIDC issuer: `https://db-rw.re8ch.com/auth/v1`
 
 The marketplace intentionally exposes one generic tenant package. Registry,
 database, observability, workload, and BYOC behavior are reusable skills inside

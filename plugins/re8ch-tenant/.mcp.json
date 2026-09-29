@@ -3,14 +3,11 @@
     "re8ch-tenant": {
       "type": "http",
       "url": "https://tools.service.re8ch.com/tenant/mcp",
-      "oauth": {
-        "clientId": "re8ch-tenant"
-      },
+      "oauth_resource": "https://tools.service.re8ch.com/tenant/mcp",
       "scopes": [
         "openid",
         "profile",
         "email",
-        "groups",
         "offline_access"
       ]
     }
