@@ -37,6 +37,7 @@ def test_tenant_plugin_uses_the_single_identity_scoped_endpoint():
                 "url": "https://tools.service.re8ch.com/tenant-native/mcp",
                 "oauth_resource": "https://tools.service.re8ch.com/tenant-native/mcp",
                 "scopes": ["openid", "profile", "email", "offline_access"],
+                "oauth": {"scopes": "openid profile email offline_access"},
             }
         }
     }
