@@ -28,8 +28,8 @@ def test_tenant_plugin_uses_the_single_identity_scoped_endpoint():
     manifest = read_json(PLUGIN / ".codex-plugin/plugin.json")
     mcp = read_json(PLUGIN / ".mcp.json")
     assert manifest["name"] == "re8ch-tenant"
-    assert manifest["version"] == "0.2.4"
-    assert manifest["interface"]["displayName"] == "Re8ch Tenant"
+    assert manifest["version"] == "0.3.0"
+    assert manifest["interface"]["displayName"] == "Re8ch"
     assert mcp == {
         "mcpServers": {
             "re8ch-tenant": {
