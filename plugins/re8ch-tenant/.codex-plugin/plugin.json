@@ -1,16 +1,16 @@
 {
   "name": "re8ch-tenant",
-  "version": "0.2.4",
-  "description": "Generic self-service access to RE8CH tenant capabilities through one identity-scoped control plane.",
+  "version": "0.3.0",
+  "description": "One RE8CH connection for tenant capabilities, reviewed dynamic workflows, and platform tools available to the authenticated Admin session.",
   "author": {
     "name": "RE8CH",
     "url": "https://github.com/re8ch"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Re8ch Tenant",
-    "shortDescription": "Consume the capabilities granted to your tenant.",
-    "longDescription": "One tenant-neutral package for service lifecycle, registry, database, observability and BYOC capabilities. The OAuth identity selects the tenant and TenantGrant selects the permitted Consumables; prompts cannot choose either boundary.",
+    "displayName": "Re8ch",
+    "shortDescription": "Tenant and authorized platform tools in one connection.",
+    "longDescription": "Access tenant services, registry, database, observability and BYOC capabilities, plus reviewed dynamic workflows. Admin organization members can discover and call Cloud Platform and Cluster Infra tools in the same login session. The server controls visibility and authorization; other users receive only their tenant capabilities.",
     "developerName": "RE8CH",
     "category": "Developer Tools",
     "capabilities": [
@@ -23,7 +23,8 @@
     "defaultPrompt": [
       "Show the capabilities available to my tenant.",
       "Plan this tenant service before creating it.",
-      "List my tenant resources and their usage."
+      "List my tenant resources and their usage.",
+      "Discover the dynamic workflows and platform tools available to my current session."
     ]
   },
   "mcpServers": "./.mcp.json"
