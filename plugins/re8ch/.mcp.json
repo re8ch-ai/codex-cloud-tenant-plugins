@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "re8ch": {
+      "type": "http",
+      "url": "https://tools.service.re8ch.com/tenant-native/mcp"
+    }
+  }
+}
