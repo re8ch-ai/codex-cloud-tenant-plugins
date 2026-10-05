@@ -33,3 +33,11 @@ interface.
 
 The package contains no access token, client secret, Kubernetes credential, or
 provider key. Installation and updates are public; runtime use requires OAuth.
+
+## Claude directory package
+
+`plugins/re8ch` packages the same OAuth-protected tenant endpoint for Claude.
+It provides one Re8ch plugin entry for ordinary tenants and authorized platform
+members. The server, not the plugin or a prompt, decides the tools each account
+can use. A dedicated sample tenant may be used for directory review without
+publishing a separate demo plugin.

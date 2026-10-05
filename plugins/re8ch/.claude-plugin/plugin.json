@@ -1,0 +1,16 @@
+{
+  "name": "re8ch",
+  "displayName": "Re8ch",
+  "version": "0.1.0",
+  "description": "Access RE8CH tenant services and the platform tools authorized for your account through one OAuth connection.",
+  "author": {
+    "name": "RE8CH",
+    "url": "https://github.com/re8ch-ai"
+  },
+  "repository": "https://github.com/re8ch-ai/codex-cloud-tenant-plugins",
+  "documentationUrl": "https://github.com/re8ch-ai/codex-cloud-tenant-plugins/tree/main/plugins/re8ch",
+  "supportUrl": "https://re8ch.com/en/feedback/",
+  "privacyPolicyUrl": "https://github.com/re8ch-ai/codex-cloud-tenant-plugins/blob/main/plugins/re8ch/PRIVACY.md",
+  "icon": "./icon.svg",
+  "license": "MIT"
+}
