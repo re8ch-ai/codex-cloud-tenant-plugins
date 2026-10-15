@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).parents[1]
 MARKETPLACE = ROOT / ".agents/plugins/marketplace.json"
 PLUGIN = ROOT / "plugins/re8ch-tenant"
+CLAUDE_PLUGIN = ROOT / "plugins/re8ch"
 
 
 def read_json(path: Path):
@@ -75,3 +76,32 @@ def test_plugin_never_embeds_credential_material():
         if path.is_file():
             text = path.read_text().lower()
             assert not any(value in text for value in forbidden), path
+
+
+def test_claude_plugin_uses_same_identity_scoped_endpoint_and_two_org_boundary():
+    manifest = read_json(CLAUDE_PLUGIN / ".claude-plugin/plugin.json")
+    mcp = read_json(CLAUDE_PLUGIN / ".mcp.json")
+    readme = (CLAUDE_PLUGIN / "README.md").read_text()
+    skill = (CLAUDE_PLUGIN / "skills/re8ch/SKILL.md").read_text()
+
+    assert manifest["name"] == "re8ch"
+    assert manifest["version"] == "0.1.1"
+    assert mcp == {
+        "mcpServers": {
+            "re8ch": {
+                "type": "http",
+                "url": "https://tools.service.re8ch.com/tenant-native/mcp",
+            }
+        }
+    }
+    assert "Re8ch application organization" in readme
+    assert "Re8ch Admin" in readme
+    assert "disconnect and reconnect" in readme
+    assert "Never treat membership in one organization" in skill
+
+
+def test_claude_plugin_uses_no_edge_logo():
+    icon = (CLAUDE_PLUGIN / "icon.svg").read_text().lower()
+    assert "no-edge" in icon
+    assert "#020202" not in icon
+    assert "black edge" not in icon
