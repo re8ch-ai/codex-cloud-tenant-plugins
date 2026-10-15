@@ -1,8 +1,8 @@
 {
   "name": "re8ch",
   "displayName": "Re8ch",
-  "version": "0.1.0",
-  "description": "Access RE8CH tenant services and the platform tools authorized for your account through one OAuth connection.",
+  "version": "0.1.1",
+  "description": "Sign in with a Re8ch tenant or Re8ch Admin account and use only the services and platform tools authorized for that session.",
   "author": {
     "name": "RE8CH",
     "url": "https://github.com/re8ch-ai"
